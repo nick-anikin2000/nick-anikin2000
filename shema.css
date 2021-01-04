@@ -1,0 +1,199 @@
+.construct {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.construct .schemaUI {
+    width: 70%;
+    height: inherit;
+    /*border: 10px solid cadetblue;*/
+    position: relative;
+}
+
+.construct .panel {
+    width: 30%;
+    height: inherit;
+    background: lightgrey;
+
+}
+
+h2 {
+    font-size: 22px !important;
+    width: 95%;
+}
+#schemaImg{
+    position: relative;
+}
+.panel {
+    text-align: center;
+}
+
+.elementList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+
+}
+
+.elementList div {
+    padding: 10px;
+    margin: 10px 5px;
+    background: lightslategray;
+    border: 2px solid white;
+    border-radius: 7px;
+}
+
+.elementList div:hover {
+    cursor: pointer;
+    background: white;
+}
+
+.schemaUI div:hover {
+    cursor: pointer;
+}
+
+/***Элементы****/
+.node {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 17px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    line-height: 14px;
+}
+
+rect {
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+input {
+    width: 30px;
+}
+
+.y-nodes {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 17px;
+    position: absolute;
+    z-index: 3;
+    color: black;
+    line-height: 14px;
+    border-radius: 50%;
+    border: 2px dotted red;
+}
+
+.dotted {
+    width: 12px;
+    height: 12px;
+    background: green;
+    position: absolute;
+    z-index: 3;
+
+}
+
+.y-dotted {
+    width: 12px;
+    height: 12px;
+    border: 2px solid green;
+    position: absolute;
+    z-index: 3;
+}
+
+.y-dotted:hover, .y-nodes:hover {
+    background: red;
+}
+
+.active {
+    background: red;
+    border: none;
+}
+
+.alert {
+    display: none;
+    position: absolute !important;
+}
+
+/**Дерево компонентов**/
+.componentThree {
+    background: aquamarine;
+    padding: 10px;
+    width: 80%;
+    position: relative;
+}
+
+.deleteBtn {
+    color: white;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    line-height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.deleteBtn:hover,.deleteBtn:focus{
+    background: blue;
+}
+g{
+    position: absolute;
+}
+svg *{
+    position: absolute;
+}
+#componentList > div {
+    margin: 5px auto;
+}
+
+.branch{
+    padding: 5px;
+}
+
+.componentThree .removeBtn {
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.alerts {
+    min-height: 10vh;
+    border-bottom: 2px solid blue;
+    width: 100%;
+}
+
+/*********SVG*********/
+ellipse, rect{
+    cursor: pointer;
+}
+
+/************************/
+
+@media (max-width: 800px) {
+    .construct.shema {
+        width: 56%;
+    }
+
+   .construct .panel {
+        width: 44%;
+    }
+}
